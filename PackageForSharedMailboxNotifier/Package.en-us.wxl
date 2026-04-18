@@ -1,0 +1,6 @@
+﻿<WixLocalization xmlns="http://wixtoolset.org/schemas/v4/wxl" Culture="en-US">
+  <String Id="LicenseRtf" Value="License.en-us.rtf" />
+  <String Id="DowngradeError" Value="A newer version of [ProductName] is already installed." />
+  <String Id="NetFrameworkRequired" Value="This application requires .NET Framework 4.8. Please install it first." />
+  <String Id="OutlookRequired" Value="This application requires Microsoft Outlook 2010 or later. Please install Outlook first." />
+</WixLocalization>

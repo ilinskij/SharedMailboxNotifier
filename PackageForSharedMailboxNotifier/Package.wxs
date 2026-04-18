@@ -1,0 +1,130 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+     xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+
+  <!--
+    SharedMailboxNotifier MSI Installer
+    WiX v6 format
+    
+    Universal x64 package that detects both 64-bit and 32-bit Outlook.
+  -->
+
+  <Package Name="Shared Mailbox Notifier"
+           Manufacturer="Ilinskij Aleksandr"
+           Version="$(var.ProductVersion)"
+           UpgradeCode="F92345FE-C3AB-48EB-807E-3A77B0DF8468"
+           Scope="perMachine"
+           Compressed="yes"
+           Codepage="1251">
+
+    <!-- Embed CAB into MSI for single-file distribution -->
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Upgrade handling -->
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)"
+                  Schedule="afterInstallInitialize" />
+
+    <!-- UI with Maintenance mode support (Modify/Repair/Remove) -->
+    <ui:WixUI Id="WixUI_InstallDir" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <WixVariable Id="WixUILicenseRtf" Value="!(loc.LicenseRtf)" />
+
+    <!-- Main feature -->
+    <Feature Id="Main" Title="Shared Mailbox Notifier" Level="1">
+      <ComponentGroupRef Id="AddInFiles" />
+      <ComponentGroupRef Id="ImageFiles" />
+      <ComponentGroupRef Id="RegistryEntries" />
+      <ComponentGroupRef Id="SatelliteAssemblies" />
+    </Feature>
+
+    <!-- ============================================================
+         PREREQUISITE CHECKS
+         
+         Each version is searched TWICE: once in the native 64-bit
+         registry, once in the WOW6432Node (32-bit) registry.
+         This ensures we detect Outlook regardless of its bitness.
+         ============================================================ -->
+
+    <!-- .NET 4.8 check -->
+    <Property Id="NETFRAMEWORK48">
+      <RegistrySearch Id="NetFramework48Search"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"
+                      Name="Release"
+                      Type="raw"
+                      Bitness="always64" />
+    </Property>
+
+    <!-- === Outlook 2010 (14.0) === -->
+    <Property Id="OUTLOOK2010_64">
+      <RegistrySearch Id="Outlook2010Search64"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Office\14.0\Outlook\InstallRoot"
+                      Name="Path"
+                      Type="raw"
+                      Bitness="always64" />
+    </Property>
+    <Property Id="OUTLOOK2010_32">
+      <RegistrySearch Id="Outlook2010Search32"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Office\14.0\Outlook\InstallRoot"
+                      Name="Path"
+                      Type="raw"
+                      Bitness="always32" />
+    </Property>
+
+    <!-- === Outlook 2013 (15.0) === -->
+    <Property Id="OUTLOOK2013_64">
+      <RegistrySearch Id="Outlook2013Search64"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Office\15.0\Outlook\InstallRoot"
+                      Name="Path"
+                      Type="raw"
+                      Bitness="always64" />
+    </Property>
+    <Property Id="OUTLOOK2013_32">
+      <RegistrySearch Id="Outlook2013Search32"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Office\15.0\Outlook\InstallRoot"
+                      Name="Path"
+                      Type="raw"
+                      Bitness="always32" />
+    </Property>
+
+    <!-- === Outlook 2016/2019/365 (16.0) === -->
+    <Property Id="OUTLOOK2016_64">
+      <RegistrySearch Id="Outlook2016Search64"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Office\16.0\Outlook\InstallRoot"
+                      Name="Path"
+                      Type="raw"
+                      Bitness="always64" />
+    </Property>
+    <Property Id="OUTLOOK2016_32">
+      <RegistrySearch Id="Outlook2016Search32"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Office\16.0\Outlook\InstallRoot"
+                      Name="Path"
+                      Type="raw"
+                      Bitness="always32" />
+    </Property>
+
+    <!-- === Outlook ClickToRun (Office 365) === -->
+    <!-- C2R registration is always in the native registry -->
+    <Property Id="OUTLOOKC2R">
+      <RegistrySearch Id="OutlookC2RSearch"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Office\ClickToRun\Configuration"
+                      Name="ProductReleaseIds"
+                      Type="raw"
+                      Bitness="always64" />
+    </Property>
+
+    <!-- Launch conditions -->
+    <Launch Condition="Installed OR NETFRAMEWORK48"
+            Message="!(loc.NetFrameworkRequired)" />
+
+    <Launch Condition="Installed OR OUTLOOK2010_64 OR OUTLOOK2010_32 OR OUTLOOK2013_64 OR OUTLOOK2013_32 OR OUTLOOK2016_64 OR OUTLOOK2016_32 OR OUTLOOKC2R"
+            Message="!(loc.OutlookRequired)" />
+
+  </Package>
+</Wix>

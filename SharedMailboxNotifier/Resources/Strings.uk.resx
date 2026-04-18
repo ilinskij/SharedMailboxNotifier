@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>Новий лист</value>
+  </data>
+  <data name="NotificationFrom" xml:space="preserve">
+    <value>Від: 📥{0}</value>
+  </data>
+  <data name="NoSubject" xml:space="preserve">
+    <value>(Без теми)</value>
+  </data>
+  <data name="InboxFolderName" xml:space="preserve">
+    <value>Вхідні</value>
+  </data>
+  <data name="AppAttribution" xml:space="preserve">
+    <value>Сповіщення спільних скриньок</value>
+  </data>
+  <data name="CategoryLabel" xml:space="preserve">
+    <value>Категорія</value>
+  </data>
+  <data name="ButtonAddCategory" xml:space="preserve">
+    <value>Позначити</value>
+  </data>
+  <data name="ButtonReply" xml:space="preserve">
+    <value>Відповісти</value>
+  </data>
+  <data name="ButtonMarkRead" xml:space="preserve">
+    <value>Прочитано</value>
+  </data>
+  <data name="SettingsMonitorModeGroup" xml:space="preserve">
+    <value>Режим роботи</value>
+  </data>
+  <data name="SettingsAllMailboxes" xml:space="preserve">
+    <value>Усі поштові скриньки</value>
+  </data>
+  <data name="SettingsSharedOnly" xml:space="preserve">
+    <value>Тільки спільні скриньки</value>
+  </data>
+  <data name="SettingsEnableSound" xml:space="preserve">
+    <value>Звукове сповіщення</value>
+  </data>
+  <data name="SettingsRoundAppLogo" xml:space="preserve">
+    <value>Кругла іконка у сповіщеннях</value>
+  </data>
+  <data name="SettingsSearchContactPhotos" xml:space="preserve">
+    <value>Шукати фото у локальних контактах (сповільнює сповіщення при великій адресній книзі)</value>
+  </data>
+  <data name="SettingsWarningAllMailboxes" xml:space="preserve">
+    <value>⚠ При виборі цього режиму стандартні сповіщення Outlook буде вимкнено, щоб уникнути дублювання. Зміни набудуть чинності після перезапуску Outlook.</value>
+  </data>
+  <data name="SettingsWarningSharedOnly" xml:space="preserve">
+    <value>✓ Стандартні сповіщення Outlook для особистих скриньок буде увімкнено. Зміни набудуть чинності після перезапуску Outlook.</value>
+  </data>
+  <data name="SettingsRestartMessage" xml:space="preserve">
+    <value>Налаштування збережено. Для застосування змін у сповіщеннях потрібен перезапуск Outlook.</value>
+  </data>
+  <data name="SettingsAboutDescription" xml:space="preserve">
+    <value>Сповіщення про нові листи у спільних поштових скриньках</value>
+  </data>
+  <data name="SettingsAboutPublisher" xml:space="preserve">
+    <value>© Олександр Ільїнський</value>
+  </data>
+  <data name="SettingsAboutAuthor" xml:space="preserve">
+    <value>Розроблено за допомогою Claude (Anthropic)</value>
+  </data>
+  <data name="ErrorSavingSettings" xml:space="preserve">
+    <value>Не вдалося зберегти налаштування, тому що </value>
+    <comment>Intentional: ends with space, not colon — stylistic choice for natural sentence flow when appending exception message</comment>
+  </data>
+  <data name="LogStartupSuccess" xml:space="preserve">
+    <value>Outlook Shared Mailbox Notifier успішно запущено.</value>
+  </data>
+  <data name="LogMonitoringCount" xml:space="preserve">
+    <value>Моніторинг {0} спільних поштових скриньок.</value>
+  </data>
+  <data name="LogShutdown" xml:space="preserve">
+    <value>Outlook Shared Mailbox Notifier зупинено.</value>
+  </data>
+  <data name="LogNewMail" xml:space="preserve">
+    <value>Отримано новий лист.</value>
+  </data>
+  <data name="LogMailbox" xml:space="preserve">
+    <value>Поштова скринька: {0}</value>
+  </data>
+  <data name="LogFrom" xml:space="preserve">
+    <value>Від: {0}</value>
+  </data>
+  <data name="LogSubject" xml:space="preserve">
+    <value>Тема: {0}</value>
+  </data>
+  <data name="LogFailedToStart" xml:space="preserve">
+    <value>Не вдалося запустити доповнення</value>
+  </data>
+  <data name="LogErrorShutdown" xml:space="preserve">
+    <value>Помилка під час завершення роботи</value>
+  </data>
+  <data name="LogErrorToastAction" xml:space="preserve">
+    <value>Помилка при обробці дії у сповіщенні: </value>
+  </data>
+  <data name="LogErrorNewMail" xml:space="preserve">
+    <value>Помилка під час обробки нового листу у </value>
+  </data>
+  <data name="LogFallbackToBalloon" xml:space="preserve">
+    <value>Не вдалося відобразити сповіщення нового типу, спробуємо старий</value>
+  </data>
+  <data name="LogStoreAdded" xml:space="preserve">
+    <value>Розпочато моніторинг нової поштової скриньки: {0}</value>
+  </data>
+  <data name="LogStoreRemoved" xml:space="preserve">
+    <value>Припинено моніторинг видаленої поштової скриньки: {0}</value>
+  </data>
+  <data name="SettingsGroupGeneral" xml:space="preserve">
+    <value>Загальні</value>
+  </data>
+  <data name="SettingsGroupAppearance" xml:space="preserve">
+    <value>Вигляд</value>
+  </data>
+  <data name="SettingsGroupAbout" xml:space="preserve">
+    <value>Про програму</value>
+  </data>
+  <data name="SettingsConfigureCategories" xml:space="preserve">
+    <value>Налаштувати категорії...</value>
+  </data>
+  <data name="CategorySelectorTitle" xml:space="preserve">
+    <value>Вибір категорій</value>
+  </data>
+  <data name="CategoryAvailable" xml:space="preserve">
+    <value>Доступні</value>
+  </data>
+  <data name="CategorySelected" xml:space="preserve">
+    <value>Обрані</value>
+  </data>
+  <data name="CategoryOk" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="CategoryCancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="CategoryLimitReached" xml:space="preserve">
+    <value>Максимум {0} категорій.</value>
+  </data>
+  <data name="CategoryCount" xml:space="preserve">
+    <value>Обрано: {0} з {1}</value>
+  </data>
+  <data name="LogOutlookAlertsSaved" xml:space="preserve">
+    <value>Збережено налаштування Outlook «Сповіщення на робочому столі» ({0}) перед вимкненням. Буде відновлено при переключенні в режим «Лише спільні скриньки».</value>
+  </data>
+  <data name="LogOutlookAlertsDisabled" xml:space="preserve">
+    <value>Вимкнено сповіщення Outlook на робочому столі (режим «Усі скриньки» — надбудова обробляє всі сповіщення).</value>
+  </data>
+  <data name="LogOutlookAlertsRestored" xml:space="preserve">
+    <value>Відновлено налаштування Outlook «Сповіщення на робочому столі»: {0} (режим «Лише спільні скриньки» — Outlook обробляє особисті сповіщення).</value>
+  </data>
+  <data name="LogOutlookSoundChanged" xml:space="preserve">
+    <value>Змінено налаштування Outlook «Звук при отриманні пошти»: {0}.</value>
+  </data>
+</root>

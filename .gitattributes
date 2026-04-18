@@ -1,0 +1,10 @@
+# Ensure consistent line endings
+* text=auto eol=crlf
+
+# Binary files
+*.png binary
+*.ico binary
+*.pfx binary
+
+# Keep shell scripts with LF if any are added
+*.sh text eol=lf

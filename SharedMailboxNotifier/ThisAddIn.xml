@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<customization xmlns="http://schemas.microsoft.com/vsto/2.0/customization">
+  <appAddin application="Outlook" loadBehavior="3" keyName="SharedMailboxNotifier">
+    <friendlyName>Shared Mailbox Notifier</friendlyName>
+    <description>Shows notifications for new emails in shared mailboxes.</description>
+  </appAddin>
+</customization>

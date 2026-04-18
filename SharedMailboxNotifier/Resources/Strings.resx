@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>New message</value>
+  </data>
+  <data name="NotificationFrom" xml:space="preserve">
+    <value>From: 📥{0}</value>
+    <comment>Format: {0} = sender name</comment>
+  </data>
+  <data name="NoSubject" xml:space="preserve">
+    <value>(No subject)</value>
+  </data>
+  <data name="InboxFolderName" xml:space="preserve">
+    <value>Inbox</value>
+  </data>
+  <data name="AppAttribution" xml:space="preserve">
+    <value>Shared Mailbox Notifier</value>
+  </data>
+  <data name="CategoryLabel" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ButtonAddCategory" xml:space="preserve">
+    <value>Flag</value>
+  </data>
+  <data name="ButtonReply" xml:space="preserve">
+    <value>Reply</value>
+  </data>
+  <data name="ButtonMarkRead" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="SettingsMonitorModeGroup" xml:space="preserve">
+    <value>Monitor Mode</value>
+  </data>
+  <data name="SettingsAllMailboxes" xml:space="preserve">
+    <value>All mailboxes</value>
+  </data>
+  <data name="SettingsSharedOnly" xml:space="preserve">
+    <value>Shared mailboxes only</value>
+  </data>
+  <data name="SettingsEnableSound" xml:space="preserve">
+    <value>Sound notification</value>
+  </data>
+  <data name="SettingsRoundAppLogo" xml:space="preserve">
+    <value>Round icon in notifications</value>
+  </data>
+  <data name="SettingsSearchContactPhotos" xml:space="preserve">
+    <value>Search local Contacts for sender photos (may slow down notifications)</value>
+  </data>
+  <data name="SettingsWarningAllMailboxes" xml:space="preserve">
+    <value>⚠ In this mode, Outlook's built-in notifications will be disabled to avoid duplicates. Changes will take effect after restarting Outlook.</value>
+  </data>
+  <data name="SettingsWarningSharedOnly" xml:space="preserve">
+    <value>✓ Outlook's built-in notifications for personal mailboxes will be enabled. Changes will take effect after restarting Outlook.</value>
+  </data>
+  <data name="SettingsRestartMessage" xml:space="preserve">
+    <value>Settings saved. To apply notification changes, please restart Outlook.</value>
+  </data>
+  <data name="SettingsAboutDescription" xml:space="preserve">
+    <value>Notifications for new emails in shared mailboxes</value>
+  </data>
+  <data name="SettingsAboutPublisher" xml:space="preserve">
+    <value>© Ilinskij Aleksandr</value>
+  </data>
+  <data name="SettingsAboutAuthor" xml:space="preserve">
+    <value>Developed with Claude (Anthropic)</value>
+  </data>
+  <data name="ErrorSavingSettings" xml:space="preserve">
+    <value>Error saving settings: </value>
+  </data>
+  <data name="LogStartupSuccess" xml:space="preserve">
+    <value>Outlook Shared Mailbox Notifier started successfully.</value>
+  </data>
+  <data name="LogMonitoringCount" xml:space="preserve">
+    <value>Monitoring {0} shared mailbox(es).</value>
+    <comment>Format: {0} = number of mailboxes</comment>
+  </data>
+  <data name="LogShutdown" xml:space="preserve">
+    <value>Outlook Shared Mailbox Notifier stopped.</value>
+  </data>
+  <data name="LogNewMail" xml:space="preserve">
+    <value>New mail received.</value>
+  </data>
+  <data name="LogMailbox" xml:space="preserve">
+    <value>Mailbox: {0}</value>
+    <comment>Format: {0} = mailbox name</comment>
+  </data>
+  <data name="LogFrom" xml:space="preserve">
+    <value>From: {0}</value>
+    <comment>Format: {0} = sender name</comment>
+  </data>
+  <data name="LogSubject" xml:space="preserve">
+    <value>Subject: {0}</value>
+    <comment>Format: {0} = email subject</comment>
+  </data>
+  <data name="LogFailedToStart" xml:space="preserve">
+    <value>Failed to start add-in</value>
+  </data>
+  <data name="LogErrorShutdown" xml:space="preserve">
+    <value>Error during shutdown</value>
+  </data>
+  <data name="LogErrorToastAction" xml:space="preserve">
+    <value>Error processing notification action: </value>
+  </data>
+  <data name="LogErrorNewMail" xml:space="preserve">
+    <value>Error processing new mail in </value>
+  </data>
+  <data name="LogFallbackToBalloon" xml:space="preserve">
+    <value>Toast notification failed, using BalloonTip</value>
+  </data>
+  <data name="LogStoreAdded" xml:space="preserve">
+    <value>Started monitoring newly added mailbox: {0}</value>
+    <comment>Format: {0} = mailbox display name</comment>
+  </data>
+  <data name="LogStoreRemoved" xml:space="preserve">
+    <value>Stopped monitoring removed mailbox: {0}</value>
+    <comment>Format: {0} = mailbox display name</comment>
+  </data>
+  <data name="SettingsGroupGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SettingsGroupAppearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="SettingsGroupAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="SettingsConfigureCategories" xml:space="preserve">
+    <value>Configure categories...</value>
+  </data>
+  <data name="CategorySelectorTitle" xml:space="preserve">
+    <value>Category Selection</value>
+  </data>
+  <data name="CategoryAvailable" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="CategorySelected" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="CategoryOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CategoryCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CategoryLimitReached" xml:space="preserve">
+    <value>Maximum {0} categories allowed.</value>
+  </data>
+  <data name="CategoryCount" xml:space="preserve">
+    <value>Selected: {0} of {1}</value>
+  </data>
+  <data name="LogOutlookAlertsSaved" xml:space="preserve">
+    <value>Saved Outlook DesktopAlerts setting ({0}) before disabling. Will be restored when switching to SharedOnly mode.</value>
+    <comment>Format: {0} = previous value (enabled/disabled)</comment>
+  </data>
+  <data name="LogOutlookAlertsDisabled" xml:space="preserve">
+    <value>Disabled Outlook DesktopAlerts (AllMailboxes mode — add-in handles all notifications).</value>
+  </data>
+  <data name="LogOutlookAlertsRestored" xml:space="preserve">
+    <value>Restored Outlook DesktopAlerts to saved value: {0} (SharedOnly mode — Outlook handles personal mailbox notifications).</value>
+    <comment>Format: {0} = restored value (enabled/disabled)</comment>
+  </data>
+  <data name="LogOutlookSoundChanged" xml:space="preserve">
+    <value>Changed Outlook PlaySound setting to: {0}.</value>
+    <comment>Format: {0} = new value (enabled/disabled)</comment>
+  </data>
+</root>

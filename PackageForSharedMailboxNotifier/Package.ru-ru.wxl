@@ -1,0 +1,6 @@
+﻿<WixLocalization xmlns="http://wixtoolset.org/schemas/v4/wxl" Culture="ru-RU" Codepage="1251">
+  <String Id="LicenseRtf" Value="License.ru-ru.rtf" />
+  <String Id="DowngradeError" Value="Более новая версия [ProductName] уже установлена." />
+  <String Id="NetFrameworkRequired" Value="Для установки требуется .NET Framework 4.8. Пожалуйста, установите его и повторите попытку." />
+  <String Id="OutlookRequired" Value="Для установки требуется Microsoft Outlook 2010 или новее. Пожалуйста, сначала установите Outlook." />
+</WixLocalization>

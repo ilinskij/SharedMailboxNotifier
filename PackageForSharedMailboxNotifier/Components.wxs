@@ -1,0 +1,174 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+     xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+    <Fragment>
+        <!--
+      Add-in files to install.
+      Source paths are relative to WiX project directory.
+    -->
+        <ComponentGroup Id="AddInFiles" Directory="INSTALLFOLDER">
+
+            <!-- Main assembly -->
+            <Component Id="MainAssembly" Guid="275CC513-9894-4743-B871-418906C23F88">
+                <File Id="SharedMailboxNotifier.dll"
+                      Source="..\SharedMailboxNotifier\bin\Release\SharedMailboxNotifier.dll"
+                      KeyPath="yes" />
+            </Component>
+
+            <!-- VSTO manifest -->
+            <Component Id="VstoManifest" Guid="12C0416E-1E9F-45AB-9FFE-205BB2DD135F">
+                <File Id="SharedMailboxNotifier.dll.manifest"
+                      Source="..\SharedMailboxNotifier\bin\Release\SharedMailboxNotifier.dll.manifest"
+                      KeyPath="yes" />
+            </Component>
+
+            <!-- VSTO deployment manifest -->
+            <Component Id="VstoDeployment" Guid="07CDA019-76FC-4D7C-B48D-8888275569E2">
+                <File Id="SharedMailboxNotifier.vsto"
+                      Source="..\SharedMailboxNotifier\bin\Release\SharedMailboxNotifier.vsto"
+                      KeyPath="yes" />
+            </Component>
+
+            <!-- VSTO Common utilities -->
+            <Component Id="VstoUtilities" Guid="425DE523-8D27-4A64-BC4F-62B143D1A44B">
+                <File Id="Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+                      Source="..\SharedMailboxNotifier\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+                      KeyPath="yes" />
+            </Component>
+
+            <!-- VSTO Outlook utilities -->
+            <Component Id="VstoOutlookUtilities" Guid="4C0599B2-5BEA-45DE-A098-ADC280E06C21">
+                <File Id="Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"
+                      Source="..\SharedMailboxNotifier\bin\Release\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"
+                      KeyPath="yes" />
+            </Component>
+
+            <!-- Toast notifications library -->
+            <Component Id="ToastNotifications" Guid="43FD6E74-9B06-49CA-969F-4E7C3B34E826">
+                <File Id="Microsoft.Toolkit.Uwp.Notifications.dll"
+                      Source="..\SharedMailboxNotifier\bin\Release\Microsoft.Toolkit.Uwp.Notifications.dll"
+                      KeyPath="yes" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <!--
+      Localization files to install.
+      Source paths are relative to WiX project directory.
+    -->
+        <!-- Satellite assemblies for localization -->
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="CultureRu" Name="ru" />
+            <Directory Id="CultureUk" Name="uk" />
+            <Directory Id="CultureDe" Name="de" />
+        </DirectoryRef>
+
+        <ComponentGroup Id="SatelliteAssemblies">
+
+            <Component Id="SatelliteRu" Directory="CultureRu" Guid="EEC50B59-E05A-4AED-9519-746E77ACB241">
+                <File Id="Resources.ru.dll"
+                    Source="..\SharedMailboxNotifier\bin\Release\ru\SharedMailboxNotifier.resources.dll"
+                    KeyPath="yes" />
+            </Component>
+
+            <Component Id="SatelliteUk" Directory="CultureUk" Guid="5CAF0E5D-310B-4583-9EB2-A2432FE70D06">
+                <File Id="Resources.uk.dll"
+                    Source="..\SharedMailboxNotifier\bin\Release\uk\SharedMailboxNotifier.resources.dll"
+                    KeyPath="yes" />
+            </Component>
+
+            <Component Id="SatelliteDe" Directory="CultureDe" Guid="026C1E04-EB45-490D-AF17-AC83569EC376">
+                <File Id="Resources.de.dll"
+                    Source="..\SharedMailboxNotifier\bin\Release\de\SharedMailboxNotifier.resources.dll"
+                    KeyPath="yes" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+
+    <Fragment>
+        <!-- Images subfolder -->
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="ImagesFolder" Name="Images" />
+        </DirectoryRef>
+
+        <ComponentGroup Id="ImageFiles" Directory="ImagesFolder">
+
+            <!-- Answer icon -->
+            <Component Id="IconAnswer" Guid="091A8EFF-873B-483D-A27A-BDEA4411ED3C">
+                <File Id="Answer.png"
+                      Source="..\SharedMailboxNotifier\Images\Answer.png"
+                      KeyPath="yes" />
+            </Component>
+
+            <!-- SetMark icon -->
+            <Component Id="IconSetMark" Guid="31DB7350-0D75-448C-B010-9C385273C11A">
+                <File Id="SetMark.png"
+                      Source="..\SharedMailboxNotifier\Images\SetMark.png"
+                      KeyPath="yes" />
+            </Component>
+
+            <!-- MarkAsRead icon -->
+            <Component Id="IconMarkAsRead" Guid="8F2B6D4E-AAB4-4698-8E07-908FD85A33F6">
+                <File Id="MarkAsRead.png"
+                      Source="..\SharedMailboxNotifier\Images\MarkAsRead.png"
+                      KeyPath="yes" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+
+    <Fragment>
+        <ComponentGroup Id="RegistryEntries" Directory="INSTALLFOLDER">
+
+            <!--
+        Add-in registration.
+        
+        64-bit Outlook reads from:  HKLM\SOFTWARE\Microsoft\Office\Outlook\Addins\...
+        32-bit Outlook on 64-bit OS reads from: HKLM\SOFTWARE\WOW6432Node\Microsoft\Office\Outlook\Addins\...
+        
+        We install BOTH keys so the add-in is found regardless of Outlook bitness.
+      -->
+
+            <!-- Native (64-bit) registry — for 64-bit Outlook -->
+            <Component Id="OutlookAddinRegistry" Guid="8A58FD01-DBE3-4915-9E91-0ADFE4BDAF5A">
+                <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Office\Outlook\Addins\SharedMailboxNotifier">
+                    <RegistryValue Type="string" Name="Description" Value="Shows notifications for new emails in shared mailboxes" />
+                    <RegistryValue Type="string" Name="FriendlyName" Value="Shared Mailbox Notifier" />
+                    <RegistryValue Type="integer" Name="LoadBehavior" Value="3" />
+                    <RegistryValue Type="string" Name="Manifest" Value="[INSTALLFOLDER]SharedMailboxNotifier.vsto|vstolocal" />
+                </RegistryKey>
+            </Component>
+
+            <!-- WOW6432Node — for 32-bit Outlook on 64-bit Windows -->
+            <Component Id="OutlookAddinRegistryWow64" Guid="FDFE409F-08C6-47F8-94D7-BB25C62CF57A">
+                <RegistryKey Root="HKLM" Key="SOFTWARE\WOW6432Node\Microsoft\Office\Outlook\Addins\SharedMailboxNotifier">
+                    <RegistryValue Type="string" Name="Description" Value="Shows notifications for new emails in shared mailboxes" />
+                    <RegistryValue Type="string" Name="FriendlyName" Value="Shared Mailbox Notifier" />
+                    <RegistryValue Type="integer" Name="LoadBehavior" Value="3" />
+                    <RegistryValue Type="string" Name="Manifest" Value="[INSTALLFOLDER]SharedMailboxNotifier.vsto|vstolocal" />
+                </RegistryKey>
+            </Component>
+
+            <!--
+        Event Log source.
+        
+        Use %SystemRoot%\Microsoft.NET\Framework64\... on 64-bit Windows (always present).
+        This is fine even for 32-bit Outlook — the EventLogMessages.dll is bitness-agnostic,
+        it's just a resource DLL with message templates.
+        
+        On a pure 32-bit Windows (extremely rare today), Framework64 won't exist,
+        but this installer targets x64 anyway, so Framework64 is guaranteed.
+      -->
+            <Component Id="EventLogSource" Guid="1C07052F-8BDF-4DEB-AB03-5A1915C6F8C1">
+                <util:EventSource Name="Outlook Shared Mailbox Notifier"
+                                  Log="Application"
+                                  EventMessageFile="%SystemRoot%\Microsoft.NET\Framework64\v4.0.30319\EventLogMessages.dll"
+                                  SupportsErrors="yes"
+                                  SupportsInformationals="yes"
+                                  SupportsWarnings="yes"
+                                  KeyPath="yes" />
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>Neue Nachricht</value>
+  </data>
+  <data name="NotificationFrom" xml:space="preserve">
+    <value>Von: 📥{0}</value>
+  </data>
+  <data name="NoSubject" xml:space="preserve">
+    <value>(Kein Betreff)</value>
+  </data>
+  <data name="InboxFolderName" xml:space="preserve">
+    <value>Posteingang</value>
+  </data>
+  <data name="AppAttribution" xml:space="preserve">
+    <value>Freigegebene Postfachbenachrichtigungen</value>
+  </data>
+  <data name="CategoryLabel" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="ButtonAddCategory" xml:space="preserve">
+    <value>Markieren</value>
+  </data>
+  <data name="ButtonReply" xml:space="preserve">
+    <value>Antworten</value>
+  </data>
+  <data name="ButtonMarkRead" xml:space="preserve">
+    <value>Gelesen</value>
+  </data>
+  <data name="SettingsMonitorModeGroup" xml:space="preserve">
+    <value>Betriebsmodus</value>
+  </data>
+  <data name="SettingsAllMailboxes" xml:space="preserve">
+    <value>Alle Postfächer</value>
+  </data>
+  <data name="SettingsSharedOnly" xml:space="preserve">
+    <value>Nur freigegebene Postfächer</value>
+  </data>
+  <data name="SettingsEnableSound" xml:space="preserve">
+    <value>Tonbenachrichtigung</value>
+  </data>
+  <data name="SettingsRoundAppLogo" xml:space="preserve">
+    <value>Rundes Symbol in Benachrichtigungen</value>
+  </data>
+  <data name="SettingsSearchContactPhotos" xml:space="preserve">
+    <value>Lokale Kontakte nach Absenderfotos durchsuchen (kann Benachrichtigungen verlangsamen)</value>
+  </data>
+  <data name="SettingsWarningAllMailboxes" xml:space="preserve">
+    <value>⚠ In diesem Modus werden die Outlook-Standardbenachrichtigungen deaktiviert, um Duplikate zu vermeiden. Änderungen werden nach dem Neustart von Outlook wirksam.</value>
+  </data>
+  <data name="SettingsWarningSharedOnly" xml:space="preserve">
+    <value>✓ Die Outlook-Standardbenachrichtigungen für persönliche Postfächer werden aktiviert. Änderungen werden nach dem Neustart von Outlook wirksam.</value>
+  </data>
+  <data name="SettingsRestartMessage" xml:space="preserve">
+    <value>Einstellungen gespeichert. Zum Anwenden der Benachrichtigungsänderungen ist ein Neustart von Outlook erforderlich.</value>
+  </data>
+  <data name="SettingsAboutDescription" xml:space="preserve">
+    <value>Benachrichtigungen über neue E-Mails in freigegebenen Postfächern</value>
+  </data>
+  <data name="SettingsAboutPublisher" xml:space="preserve">
+    <value>© Ilinskij Aleksandr</value>
+  </data>
+  <data name="SettingsAboutAuthor" xml:space="preserve">
+    <value>Entwickelt mit Claude (Anthropic)</value>
+  </data>
+  <data name="ErrorSavingSettings" xml:space="preserve">
+    <value>Fehler beim Speichern der Einstellungen: </value>
+  </data>
+  <data name="LogStartupSuccess" xml:space="preserve">
+    <value>Outlook Shared Mailbox Notifier erfolgreich gestartet.</value>
+  </data>
+  <data name="LogMonitoringCount" xml:space="preserve">
+    <value>Überwachung von {0} freigegebenen Postfächern.</value>
+  </data>
+  <data name="LogShutdown" xml:space="preserve">
+    <value>Outlook Shared Mailbox Notifier gestoppt.</value>
+  </data>
+  <data name="LogNewMail" xml:space="preserve">
+    <value>Neue E-Mail empfangen.</value>
+  </data>
+  <data name="LogMailbox" xml:space="preserve">
+    <value>Postfach: {0}</value>
+  </data>
+  <data name="LogFrom" xml:space="preserve">
+    <value>Von: {0}</value>
+  </data>
+  <data name="LogSubject" xml:space="preserve">
+    <value>Betreff: {0}</value>
+  </data>
+  <data name="LogFailedToStart" xml:space="preserve">
+    <value>Das Add-In konnte nicht gestartet werden</value>
+  </data>
+  <data name="LogErrorShutdown" xml:space="preserve">
+    <value>Fehler beim Herunterfahren</value>
+  </data>
+  <data name="LogErrorToastAction" xml:space="preserve">
+    <value>Fehler bei der Verarbeitung der Benachrichtigungsaktion: </value>
+  </data>
+  <data name="LogErrorNewMail" xml:space="preserve">
+    <value>Fehler beim Verarbeiten neuer E-Mails im </value>
+  </data>
+  <data name="LogFallbackToBalloon" xml:space="preserve">
+    <value>Toast-Benachrichtigung fehlgeschlagen, Fallback auf BalloonTip</value>
+  </data>
+  <data name="LogStoreAdded" xml:space="preserve">
+    <value>Überwachung des neu hinzugefügten Postfachs gestartet: {0}</value>
+  </data>
+  <data name="LogStoreRemoved" xml:space="preserve">
+    <value>Überwachung des entfernten Postfachs beendet: {0}</value>
+  </data>
+  <data name="SettingsGroupGeneral" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="SettingsGroupAppearance" xml:space="preserve">
+    <value>Darstellung</value>
+  </data>
+  <data name="SettingsGroupAbout" xml:space="preserve">
+    <value>Über das Programm</value>
+  </data>
+  <data name="SettingsConfigureCategories" xml:space="preserve">
+    <value>Kategorien konfigurieren...</value>
+  </data>
+  <data name="CategorySelectorTitle" xml:space="preserve">
+    <value>Kategorieauswahl</value>
+  </data>
+  <data name="CategoryAvailable" xml:space="preserve">
+    <value>Verfügbar</value>
+  </data>
+  <data name="CategorySelected" xml:space="preserve">
+    <value>Ausgewählt</value>
+  </data>
+  <data name="CategoryOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CategoryCancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="CategoryLimitReached" xml:space="preserve">
+    <value>Maximal {0} Kategorien erlaubt.</value>
+  </data>
+  <data name="CategoryCount" xml:space="preserve">
+    <value>Ausgewählt: {0} von {1}</value>
+  </data>
+  <data name="LogOutlookAlertsSaved" xml:space="preserve">
+    <value>Outlook-Einstellung „Desktopbenachrichtigungen" ({0}) vor dem Deaktivieren gespeichert. Wird beim Wechsel in den Modus „Nur freigegebene Postfächer" wiederhergestellt.</value>
+  </data>
+  <data name="LogOutlookAlertsDisabled" xml:space="preserve">
+    <value>Outlook-Desktopbenachrichtigungen deaktiviert (Modus „Alle Postfächer" — Add-In verarbeitet alle Benachrichtigungen).</value>
+  </data>
+  <data name="LogOutlookAlertsRestored" xml:space="preserve">
+    <value>Outlook-Einstellung „Desktopbenachrichtigungen" auf gespeicherten Wert wiederhergestellt: {0} (Modus „Nur freigegebene Postfächer" — Outlook verarbeitet persönliche Benachrichtigungen).</value>
+  </data>
+  <data name="LogOutlookSoundChanged" xml:space="preserve">
+    <value>Outlook-Einstellung „Sound bei neuer E-Mail" geändert auf: {0}.</value>
+  </data>
+</root>

@@ -1,0 +1,33 @@
+﻿<Project Sdk="WixToolset.Sdk/6.0.2">
+  <PropertyGroup>
+    <OutputType>Package</OutputType>
+    <!-- Version in one place — used in OutputName and passed to Package.wxs via define -->
+    <PackageVersion>2.0.0.0</PackageVersion>
+    <OutputName>SharedMailboxNotifier.v$(PackageVersion)</OutputName>
+    <DefineConstants>ProductVersion=$(PackageVersion)</DefineConstants>
+    <!--
+      Always build an x64 MSI.
+      
+      An x64 MSI can detect and work with both 64-bit and 32-bit Outlook
+      thanks to Bitness="always32" / "always64" in RegistrySearch elements.
+      
+      The VSTO add-in DLL itself is AnyCPU, so it runs in whatever Outlook
+      process loads it (32- or 64-bit).
+    -->
+    <InstallerPlatform>x64</InstallerPlatform>
+    <DefaultLanguage>ru-RU</DefaultLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="License.en-us.rtf" />
+    <None Include="License.ru-ru.rtf" />
+  </ItemGroup>
+  <!-- Reference to main project -->
+  <ItemGroup>
+    <ProjectReference Include="..\SharedMailboxNotifier\SharedMailboxNotifier.csproj" />
+  </ItemGroup>
+  <!-- WiX UI extension -->
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="6.0.2" />
+    <PackageReference Include="WixToolset.Util.wixext" Version="6.0.2" />
+  </ItemGroup>
+</Project>
