@@ -34,7 +34,7 @@ Notifications are automatically removed when the email is read or deleted in Out
 ## Requirements
 
 - Windows 7 or later (Windows 10 1607+ for Toast notifications)
-- Microsoft Outlook 2013, 2016, 2019, or Microsoft 365 (desktop)
+- Microsoft Outlook 2010, 2013, 2016, 2019, or Microsoft 365 (desktop)
 - .NET Framework 4.8
 - Visual Studio 2022 with the **Office/SharePoint development** workload (for building from source)
 
@@ -47,7 +47,7 @@ Notifications are automatically removed when the email is read or deleted in Out
 
 ## Installation
 
-For end-user deployment, publish via ClickOnce from Visual Studio or create an MSI installer. The add-in requires the Visual Studio 2010 Tools for Office Runtime (VSTO Runtime), which is included with Office 2013+.
+For end-user deployment, publish via ClickOnce from Visual Studio or create an MSI installer. The add-in requires the Visual Studio 2010 Tools for Office Runtime (VSTO Runtime), which is included with Office 2010+.
 
 ## Configuration
 
